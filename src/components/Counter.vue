@@ -5,17 +5,12 @@
 	</div>
 </template>
 
-<script>
-export default {
-	data() {
-		return {
-			number: 0,
-		}
-	},
-	methods: {
-		add() {
-			this.number++
-		},
-	},
+<script setup>
+import { ref } from '@nuxtjs/composition-api'
+
+const number = ref(0)
+
+const add = () => {
+	number.value++
 }
 </script>
